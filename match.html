@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate League Matches</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>⚽ ULTIMATE LEAGUE MATCHES</h1>
+
+    <nav class="main-nav">
+        
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="match.html">Matches</a>
+            <a href="tables.html">Tables</a>
+        </nav>
+    </nav>
+
+    <div class="top-bar">
+      <div class="week-selector">
+        <label for="week">Select Week:</label>
+        <select id="week" onchange="loadWeek()">
+          <option value="1">Week 1</option>
+          <option value="2">Week 2</option>
+          <option value="3">Week 3</option>
+          <option value="4">Week 4</option>
+          <option value="5">Week 5</option>
+          <option value="6">Week 6</option>
+        </select>
+      </div>
+
+      <button id="theme-toggle" class="theme-btn" onclick="toggleTheme()">🌙</button>
+    </div>
+  </header>
+
+  <main id="match-container">
+    <!-- Matches dynamically loaded here -->
+  </main>
+
+  <button onclick="scrollToTop()" class="top-btn">⬆</button>
+
+  <!-- Modal for match details -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-teams"></p>
+      <p id="modal-time"></p>
+      <p id="modal-countdown"></p>
+      <a id="modal-link" href="#" target="_blank">View Highlights</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
